@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+<!-- 这是将Servlet接口与myservlet域名绑定，方便浏览器通过http://localhost:8080/servlet/myservlet访问Servlet接口 -->
+	<servlet>
+		<servlet-name>my</servlet-name><!--servlet的 名称-->
+		<servlet-class>servlet.AServletImp</servlet-class>
+		<init-param><!--初始化参数配置-->
+			<param-name>p1</param-name>
+			<param-value>ok</param-value>
+		</init-param>
+		<init-param>
+			<param-name>p2</param-name>
+			<param-value>haha</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>my</servlet-name>
+		<url-pattern>/myservlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>http</servlet-name>
+		<servlet-class>httpservlet.MyHttpServlet</servlet-class>
+	</servlet>
+
+	
+	<servlet-mapping>
+		<servlet-name>http</servlet-name>
+		<url-pattern>/myhttpservlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MyHttpServlet2</servlet-name>
+		<servlet-class>httpservlet.MyHttpServlet2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyHttpServlet2</servlet-name>
+		<url-pattern>/MyHttpServlet2</url-pattern>
+	</servlet-mapping>
+  
+</web-app>
