@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="cglib"
+  id="myeclipse.1479993422670"
+  context-root="/aop"
+  j2ee-spec="5.0"
+  archive="cglib.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
